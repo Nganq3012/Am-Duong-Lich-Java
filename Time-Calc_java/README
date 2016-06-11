@@ -1,0 +1,73 @@
+Khai báo:
+
+DateCalc dateCalc = new DateCalc(14, 5, 2016);
+
+TimeCalc timeCalc = new TimeCalc();
+
+ 
+
+ 
+
+1. Cho biết ngày dd/mm/yyyy là ngày thứ mấy: 
+
+dateCalc.getWeekDay() => “Thursdays”
+
+2. Tính số ngày trong tháng: 
+
+dateCalc.getDayInMonth() => “31”
+
+3. Đếm số ngày dựa vào 2 mốc thời gian: 
+
+new DateCalc().countDaysBetweenTwoDate(2016, 5, 15, 2016, 1, 1)) => 135 ngày.
+
+4. Cho biết tên của năm hiện tại theo CAN-CHI:
+
+dateCalc.CANCHI() => “Binh Than”
+
+5. Cho biết thế kỷ:
+
+dateCalc.getCentury() => “21”
+
+6. Đếm tổng số giây dựa vào 2 mốc thời gian:
+
+timeCalc.getSecondsBetweenTwoDay(new DateCalc(15, 5, 2016), new DateCalc(13, 5, 2016)) => “172800 s”
+
+7. Đếm tổng số phút dựa vào 2 mốc thời gian:
+
+timeCalc.getMinutesBetweenTwoDay(new DateCalc(15, 5, 2016), new DateCalc(13, 5, 2016)) => “2880 m”
+
+8. Đếm tổng số giờ dựa vào 2 mốc thời gian:
+
+timeCalc.getHoursBetweenTwoDay(new DateCalc(15, 5, 2016), new DateCalc(13, 5, 2016)) => “48”
+
+9. Tiết khí:
+
+dateCalc.getTIETKHI() => “Tieu Tuyet”
+
+10. Chuyển đổi âm lịch sang dương lịch:
+
+1
+2
+3
+<br />DateCalc l = new DateCalc(4, 4, 2015);
+int[] solar = l.getSolar();
+System.out.println(l.toString() + " to solar is: " + solar[0] + "/" + solar[1] + "/" + solar[2]);
+11. Chuyển đổi dương lịch sang âm lịch:
+
+1
+2
+3
+<br />DateCalc s = new DateCalc(4, 4, 2015);
+int[] lunar = s.getLunar();
+System.out.println(s.toString() + " to lunar is: " + lunar[0] + "/" + lunar[1] + "/" + lunar[2]);
+12. Kiểm tra năm nhuận:
+
+dateCalc.isLeapYear() // return true if the year input is leap.
+
+………..
+
+ 
+
+Project đơn giản này chủ yếu phục vụ cho mục đích học tập, dành cho các bạn nào cần tham khảo có thể mở source ra xem.
+
+Nếu có thắc mắc, muốn đóng góp hoặc phát hiện bugs có thể comment bên dưới hoặc gửi mail về địa chỉ: n@mhuy.xyz 
